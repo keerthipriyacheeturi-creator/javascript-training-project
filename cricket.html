@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cricket game</title>
+    <link rel="stylesheet" href="cricket.css">
+    
+</head>
+<body>
+    <h1>bat ball stump game</h1>
+    <button class="choice-button" onclick="
+    /* const userChoiceMsg = 'you have choosen bat';
+    // //lets generate the user choice and computer choice by using math.round*3 cause in console.log everytime you multiple math.round*3 it shows different floating integers so hence we can assign different values by multiplying.
+    //  let randomNumber = Math.rondom() *3 //this generates a randomNumber between 0 and 3
+    //  let computerChoice;
+    //  if(randomNumber > 0 && randomNumber <= 1) {
+    //     computerChoice = 'bat';
+    //   // console.log('computer choice is bat');
+    //  } else if (randomNumber >1 && randomNumber <=2){
+    //      computerChoice = 'ball';
+    //    // console.log('computer choice is ball');
+    //  } else {
+    //      computerChoice = 'stump'
+    //     //console.log('computer choice is stump');
+    //  }
+    //  const computerChoiceMsg = `computer choice is ${computerChoice}`;
+      //generateComputerChoice();*/
+     let computerChoice = generateComputerChoice();
+      let resultMsg = ('bat', computerChoice);
+      showResult('bat', computerChoice, resultMsg);
+      {
+     if (computerChoice === 'ball'){
+        resultMsg = 'user won';
+     } else if (computerChoice === 'bat'){
+        resultMsg = `it's a tie`;
+     }else if (computerChoice === 'stump'){
+        resultMsg = 'computer has won';
+     }
+      alert(`you have choosen bat. computer choice is ${computerChoice} and ${resultMsg}`);
+    ">
+  <img src="https://m.media-amazon.com/images/I/317VTY6RngL.jpg" alt="bat image" class="choice-image">  
+  </button>
+
+    <button  class="choice-button"
+     onclick="
+     //randomNumber = Math.random()*3;
+    //if (randomNumber > 0 && randomNumber <=1){
+      //  computerChoice = 'bat';
+    //} 
+    //else if (randomNumber >1 && randomNumber <=2){
+      //  computerChoice = 'ball';
+    //}
+    //else {
+      //  computerChoice = 'stump'
+    //}  
+     computerChoice = generateComputerChoice();
+     resultMsg = getResult('ball', computerChoice);
+     showResult('ball', computerChoice, resultMsg);
+    if (computerChoice === 'ball'){
+        resultMsg = `it's a tie`;
+    }
+    else if (computerChoice === 'bat') {
+        resultMsg = 'computer has won';
+    } else if (computerChoice === 'stump'){
+        resultMsg = 'user won';
+    }
+    alert(`you have choosen ball. computer choice is ${computerChoice} and ${resultMsg}`);
+    ">
+   <img src="https://www.shutterstock.com/image-illustration/3d-shiny-new-test-match-600nw-2449821457.jpg" alt="ball image" class="choice-image">  
+  </button>
+
+    <button class="choice-button"
+      onclick=" 
+      //randomNumber = Math.random()*3;
+    // if (randomNumber > 0 && randomNumber <=1){
+       // computerChoice = 'bat';
+    // }
+    // else if (randomNumber > 1 && randomNumber <=2){
+       // computerChoice = 'ball';
+    // }
+     //else {
+       // computerChoice = 'stump';
+     //} 
+     computerChoice = generateComputerChoice();
+     resultMsg = getResult('ball', computerChoice);
+     showResult('ball', computerChoice, resultMsg);
+      computerChoice = generateComputerChoice();
+      if (computerChoice === 'ball'){
+        resultMsg = `computer won`;
+    }
+    else if (computerChoice === 'bat') {
+        resultMsg = 'user won';
+    } else if (computerChoice === 'stump'){
+        resultMsg = `it's a tie`;
+    }
+    alert(`you have choosen stump. computer choice is ${computerChoice} and ${resultMsg}`);
+     ">
+    <img src="https://nwscdn.com/media/catalog/product/cache/h900xw900/i/c/icc_regulation_senior_cricket_stumps.jpg" alt="stump image" class="choice-image"> 
+    </button>
+    <h3 id="user-move"></h3>
+    <h3 id="computer-move"></h3>
+    <h3 id="result"></h3>
+    <h3 id="score"></h3>
+
+
+
+
+    <button onclick="localStorage.clear() 
+    resetScore(scoreStr);">reset</button>
+
+  
+
+     <script src="cricket.js">
+      
+     }
+     </script>
+     
+</body>
+</html>
+

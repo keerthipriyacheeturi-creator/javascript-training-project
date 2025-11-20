@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loops</title>
+</head>
+<body>
+    
+    <script>
+        let num = 1; //initialisation
+        while (num <= 10) {   //condition
+            console.log(num);
+            num = num + 1;   //updating
+             //infinite loop , which means tere is no breaking point
+             num++; // also updating
+        }
+
+        console.log('final value of num is: ' + num);
+
+        let x = 0;
+        while(x < 1) {
+            console.log(x);
+            x = Math.random * 2;
+        }
+         console.log('final value of num is: ' + x); //non-standard loop indirect way to repeat loop
+
+         let num1 = 0;  //initialisation
+         do {
+            console.log(num);
+            num++;  //updating
+         }
+         while (num < 5);  //condition
+
+         for ( let num = 1; num <= 3 ; num++);{
+            console.log(num);
+         }
+
+         let nums = [4,56,8,-87,9,78];
+         for (let index = 0; index <= nums.length -1; index++){
+            console.log(nums[index]);   // i means index
+         }        
+         
+         //ACCUMULATION
+         let nums3 = [3, 6, 7, 9, 4];
+         let sum = 0;
+         for (let i = 0; i < nums.length; i++) {
+            sum += nums[i];
+         }
+         console.log(`sum of the array is ${sum}`);
+
+         let squares = [];
+         for (let i = 0; i < nums.length; i++) {
+           // sum[i] = nums[i] * nums[i];
+           square.push(nums[i] * nums[i]);
+         }
+         console.lo(squares);
+
+
+         for (let i = 0; i < 50; i++){
+            console.log(i);
+            if (i === 34){
+                break;
+            }
+         }
+
+         let arr5 = [1,2,3,4,5,6,7,8];
+         for (let i = 0; i < arr.length; i++){
+            if (arr5 [i] === 8) {
+                console.log(`number found at index ${i}`);
+                break;            //breaks the iteration
+            }
+            console.log('still looking');
+         }
+
+         for (let i = 1; i <= 25; i++){
+            if(i % 2 == 0) {
+                continue;   //skips the current iteration
+            }
+            console.log(i);  
+         }
+
+    </script>
+</body>
+</html>

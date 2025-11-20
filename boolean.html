@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOOLEAN</title>
+</head>
+<body>
+
+    <script>
+         console.log(5 > 8); //-->compares sol will be false
+        console.log(typeof true); //->represents a string
+        console.log(5 == 5);
+        console.log(5 == 4); //-->false
+        console.log(5 == 5.0); //true
+        console.log(5 == 5);//true
+        console.log(5 === 5.0);//true
+        console.log(5 === 5.0);//true
+
+        console.log(5 == '5.0');//true
+        console.log(5 == '5');//true
+        console.log(5 === '5.0');//false
+        console.log(5 === '5');//false
+       //== explicits so what equality establishes (changes conversion then checks)
+       //=== will not change coversion will directly checks the values of both sides
+       // the value should be exactly equal then the === shows true 
+
+       console.log(5 + 5 === 4 + 6) //true
+       //true cause the arthemetic operator will be done frst then comparision 5+5=10;4+6=10 hence true
+        console.log("checking if you can drive")
+        let age = '';
+       if (age >= 18){
+        console.log("you can drive");
+       }
+       if (age < 18){
+        console.log("use a bicycle");
+       }
+       else{
+        console.log("no driving acess");
+       }
+       if (age > 65){
+        console.log("ask for help");
+       }
+      //another method used for single line statement mostly not recommended
+       if (age >18) console.log("you can drive");
+       else console.log("use a bicycle");
+     
+       //logical operators
+     age = 45;
+       if (age > 18 && age <65){
+        console.log('you can drive');
+       }
+       else{
+        console.log('use a bicycle');
+       }
+
+       age = 12;
+       if (age >18 || age>65){
+        console.log('you can drive');
+       }
+       else{
+        console.log('you can take help');
+       }
+
+       age = 7;
+       if (age <18) {
+        console.log('you can use a bicycle');
+       }
+    </script>
+</body>
+</html>

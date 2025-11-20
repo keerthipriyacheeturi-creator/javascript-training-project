@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARRAY</title>
+</head>
+<body>
+    
+    <script>
+        let numbers = [1,4,3,7,5,6,7,2];
+        console.log(numbers);
+        console.log(numbers[0]);
+
+        let doosra = [1,true,null,iuhkchda];
+        console.log(doosra(3));
+        console.log(typeof doosra) 
+
+        //checking if the object is array or not
+        console.log(Array.isArray(doosra));
+
+        let arr = [1,2,3];
+        console.log(arr);
+        arr.push(6); // push adds element at the last
+        console.log(arr);
+       let popped =  arr.pop();   //pop remove last element
+       console.log('popped' + arr.pop());
+        console.log(arr); 
+
+        let arra = [3,4,5,6];
+        console.log(arra);
+        arra.splice(1,2);
+        console.log(arra); //splice removes elements using index
+
+        let array = [1,2,3,4,5];
+        console.log(array.toString()) //converts to string
+
+        array.sort();
+        console.log(array); //sorts the element from small to big
+
+        array.valueOf()      //same array prints but in different object
+
+        let arr2 = arr;
+        arr2[0] = 99; //resetting element
+        console.log(arr);
+
+        let [a,b,c,d] = arr;
+        console.log(a + " " + b + " " + c +" " +d);
+    </script>
+</body>
+</html>

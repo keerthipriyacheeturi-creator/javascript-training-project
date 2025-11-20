@@ -3,65 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>practice html</title>
+    <title>practice set</title>
 </head>
 <body>
     
+
     <script>
-        let product = {
-            size: 's',
-            name: 'jeans',
-            fit: 'slim fit',
-            'delivery-time': 'same day delivery',
-        };
-        let copyProduct = product;
-        console.log(product);
-        copyProduct.size = 'm';
-        console.log(product);
-        copyProduct.fit = 'regular fit';
-        console.log(product);
+        let arr = [5,6];
+        arr.push(7);        //adds in the end
+        console.log(arr);
 
-        console.log(product('delivery-time'));
+        arr.unshift(4);  //adds in the beginning
+        console.log(arr);
 
-        let obj = {
-            message: 'good job';
-            status: 'complete'
-        };
-        console.log(obj);
-        let {message, status} = obj;
-        console.log(message);
-        console.log(status);
-
-        function isIdenticalProduct(product1, product2)
-        {
-            if(typeof product1 !== 'object' || typeof product2 !== 'object'){
-                console.warn('parameter passed was not an object');
-                return false;
-            }
-
-            if(product1 == product2){
-                return true;
-            }
-            if (product1.name === product2.name &&
-                product.size === product2.size &&
-                product.fit === product2.fit 
-            ){
-                return true;
-            } else {
-                return false;
-            }
-           // if(typeof product1 !== 'object' || typeof product2 !== 'object')
+        function getElement(arr, position) {
+            return arr[position -1];
         }
-        let product2 = {
-            size: 'm',
-            name: 'jeans',
-            fit: 'slim fit',
-            'delivery-time': 'same day delivery',
-        };
-        console.log(isIdenticalProduct(product, ''));
-        console.log(isIdenticalProduct(product, product));
-        console.log(isIdenticalProduct(product3, product2));
-        console.log(isIdenticalProduct(product2, product3));
+        let arr2 = [1,2,3,4,5,6,7,8,9];
+        console.log(getElement(arr2,5));
+
+        let arr3 = [4,5,6,7];
+        console.log(arr.slice(1,2));       //give a new copy of the array using index value
+
+        function arrCopy(arr4){
+            return arr4.slice(0, arr.length);
+        }
+
+        let arr4 = [4,5,6,7];
+        let arr5 = arrCopy(arr4);
+        arr5[0] = null;      //removing frst element explicitily
+        console.log(arr4);
+        console.log(arr5);
+
+        function isPrime(num) {
+            for (let i = 2; i < num; i++){
+                if (num % i == 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+        console.log(isPrime(5));
+        console.log(isPrime(10));
+        console.log(isPrime(17));
+        console.log(isPrime(21));
+        console.log(isPrime(56));
+
+        let num = 2;
+        let i = 0;
+        while (true) {
+           if (isPrime(num)){
+            console.log(num);
+            i++; 
+            if (i >= 5) {
+                break;
+           }
+        }
+           num++;
+        }
+
+        for (let i = 10; i > 0; i--){
+            console.log(i);            //reversing loop
+        }
+
+        for (let i = 0; i < 10; i++){
+            console.log(10 - i);       //reverse loop
+        }
+
+        let num1 = [1, -6, 5, 7, -98]; 
+        for (let i = 0; i < nums.length; i++) {
+            if (nums[i] < 0) continnue;
+            console.log(nums[i]);
+        }
+
+
+
+        let arr6 = ['kg', 'coding', 'javascript', 'course', 'is', 'best'];
+        let result = '';
+        for (let i = 0; i < arr6.length; i++) {
+            result += arr6[i] + ' ';
+        }
+        console.log(result);
+
+        console.log(arr6.join(" ")); //another way to join the strings
+
+
     </script>
 </body>
 </html>
