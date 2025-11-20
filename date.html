@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date</title>
+</head>
+<body>
+    <button class="mu-div">this is the div</button>
+    <script>
+        let myDate = new Date ();
+        console.log(myDate.getTime());
+        console.log(myDate.getFullYear());
+        console.log(myDate.getDay());
+        console.log(myDate.getHours());
+        console.log(myDate.getMinutes());
+        console.log(myDate.getMilliseconds());
+
+        //DOM:mirror image 
+        document.location //gives entire location
+        document.title //shows the title
+        document.href //url of the page
+        document.domain //shows the domain
+        document.querySelector('button').classList.add('your-button') //can edit by adding and removing classes
+        document.createElement('button'); //creates a element
+        button.innerText = 'click me'
+        document.querySelector('.my-div').appendChild(button); //appending child
+        document.querySelector('.my-div').removeChild(button); //removes the element
+
+
+    </script>
+</body>
+</html>

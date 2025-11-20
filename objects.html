@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objects</title>
+</head>
+<body>
+    <script>
+        let product = {
+        company: 'mango',
+        price: 861,      //can define numbers and also strings
+        item_name: 't-shrit',
+        };
+        console.log(product);
+        //individual accessing
+        console.log(product.company);
+        console.log(product.price);
+        console.log(product.item_name);
+        //changing name
+        product.company = 'banana';
+        console.log(product.company);
+
+      //another way to access elements is brackets notation
+        console.log(product('company'));
+        console.log(product('price'));
+        console.log(product('item_name')); //with brackets the names access as string
+        // both dot operation and bracket operation will be same aceesing 
+        //quotes are used because even if hyphen is there it can access entire element, if you can't access direct element then you can use bracket notation 
+
+        let propertyName = 'item-name';
+        console.log(product(propertyName)); //defined cause we used brackets
+         console.log(product.propertyName); //undefined dot operation will not work here so we use brackets
+
+
+         //deleting elements through dot notation
+         delete product.company;
+         console.log(product);
+         
+         //deleting elements through backet notation
+         delete product('company');
+          console.log(product);
+
+          //inside object
+          let product = {
+            company: 'mango',
+            price: 861,
+            'item-name': t-shrit,
+            displayPrice: function(){
+                console.log(`price of the product is ₹${this.price}`); //objects can also have methods like we have use 'this' method here this means current object
+                console.log('this is kg coding'.length); // when we use a primitive here javascript will accepts that primitive and then it creates as a objects to get different methods
+                 console.log('this is kg coding'.toUpperCase());
+                  console.log('this is kg coding'.replace('Knowledge gate'));
+            }
+          };
+          product.displayProduct();
+
+          //object reference
+          let a = 5;
+          let b = a;
+          console.log(`${a}, ${b}`);
+          a = 8;
+          console.log(`${a}, ${b}`);
+
+          let x = {num: 5};
+          let y = x;
+          console.log(`${x,num}, ${y,num}`);
+          x.num = 8;
+          console.log(`${x,num},${y,num}`); // here x and y both are references to that object
+
+          let p = {pop: 'yus'};
+          let q = {pop: 'yus'};
+          console.log(p===q); 
+
+          //destructuring
+          let{company, price} = product; //multiple elements can be assign
+          console.log(company);
+          console.log(price);
+
+          // shorthand property
+         
+    </script>
+</body>
+</html>
